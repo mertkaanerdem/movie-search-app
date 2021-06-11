@@ -1,14 +1,14 @@
-import React, { createContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { createContext, useState, useEffect } from "react";
+import axios from "axios";
 export const MovieContext = createContext();
 
-const API_KEY = ''; // OMDb API Key
+const API_KEY = "e8e5aef2"; // OMDb API Key
 
 const MovieApp = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState();
-  const [search, setSearch] = useState('');
-  const [selectedMovie, setSelectedMovie] = useState('');
+  const [search, setSearch] = useState("");
+  const [selectedMovie, setSelectedMovie] = useState("");
 
   const fetchMovies = async (searchValue) => {
     const response = await axios(
